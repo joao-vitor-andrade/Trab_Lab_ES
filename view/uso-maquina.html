@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/base.css">
+    <link rel="stylesheet" href="../css/layout.css">
+    <link rel="stylesheet" href="../css/components.css">
+    <title>CyberZone - Uso de Máquina</title>
+</head>
+<body>
+    <header>
+        <section class="topo-marca">
+            <h1>CYBERZONE</h1>
+        </section>
+        <a href="#" id="botao-sair" onclick="realizarLogoutView()">Sair</a>
+    </header>
+
+    <nav class="menu-colorido">
+        <ul>
+            <li><a href="home.html">Home</a></li>
+            <li><a href="cadastro-cliente.html">Cad. Cliente</a></li>
+            <li><a href="cadastro-computador.html">Cad. Computador</a></li>
+            <li><a href="cadastro-funcionario.html">Cad. Funcionário</a></li>
+            <li><a href="cadastro-produto.html">Cad. Produto</a></li>
+            <li><a href="visualizar-clientes.html">Ver Clientes</a></li>
+            <li><a href="visualizar-computadores.html">Ver Computadores</a></li>
+            <li><a href="visualizar-funcionarios.html">Ver Funcionários</a></li>
+            <li><a href="visualizar-produtos.html">Ver Produtos</a></li>
+            <li><a href="uso-maquina.html">Uso de Máquina</a></li>
+            <li><a href="venda.html">Venda</a></li>
+        </ul>
+    </nav>
+
+    <main class="uso-main">
+        <section class="uso-caixa">
+            <h2>Registrar Uso de Máquina</h2>
+
+            <!-- ETAPA 1: Identificar cliente cadastrado -->
+            <article id="etapa-cliente-uso" style="margin-bottom: 2vh;">
+                <h3 style="font-size:1vw; margin-bottom:1vh; color: rgb(0,180,120);">1. Identificar Cliente Cadastrado</h3>
+                <div style="display:flex; gap:1vw; align-items:flex-end; flex-wrap:wrap;">
+                    <div style="flex:1; min-width:180px;">
+                        <label for="uso-cpf-cliente" style="display:block; font-size:0.85vw; margin-bottom:0.4vh;">CPF do Cliente</label>
+                        <input type="text" id="uso-cpf-cliente" placeholder="Digite o CPF" inputmode="numeric"
+                               style="width:100%; padding:0.8vh 0.8vw; font-size:0.9vw; border:1px solid #444; background:#1a1a1a; color:#fff; border-radius:4px;">
+                    </div>
+                    <button type="button" onclick="buscarClienteUso()"
+                            style="background:rgb(0,180,120); color:#fff; border:none; padding:0.9vh 1.5vw;
+                                   font-size:0.85vw; cursor:pointer; text-transform:uppercase; border-radius:4px; white-space:nowrap;">
+                        BUSCAR CLIENTE
+                    </button>
+                </div>
+                <p id="uso-cliente-info" style="margin-top:1vh; font-size:0.9vw; color:#aaa;"></p>
+            </article>
+
+            <!-- ETAPA 2: Formulário de uso (bloqueado até cliente identificado) -->
+            <form class="uso-form" id="form-uso" style="opacity:0.4; pointer-events:none;">
+                <h3 style="font-size:1vw; margin-bottom:1vh; color: rgb(0,180,120);">2. Dados do Uso</h3>
+
+                <label for="uso-maquina">Máquina (somente livres)</label>
+                <select id="uso-maquina" name="uso-maquina" onchange="aoSelecionarMaquina()" required>
+                    <option value="" disabled selected>Carregando máquinas...</option>
+                </select>
+
+                <input type="hidden" id="uso-numero-maquina">
+                <label for="uso-valor-hora">Valor por hora (R$) — preenchido automaticamente</label>
+                <input type="number" id="uso-valor-hora" name="uso-valor-hora"
+                       placeholder="Selecione uma máquina acima" step="0.01" min="0" readonly
+                       style="background:#f0f0f0; cursor:not-allowed;">
+
+                <label for="uso-horas">Quantidade de Horas</label>
+                <input type="number" id="uso-horas" name="uso-horas"
+                       placeholder="Ex: 2 ou 1.5 para 1h30min" step="0.5" min="0.5" required>
+
+                <button type="button" onclick="calcularUsoMaquina()">CALCULAR TOTAL</button>
+            </form>
+
+            <article id="resultado-uso" style="display: none;">
+                <h3 style="margin-bottom: 1.5vh; font-size: 1vw;">Resumo da Sessão</h3>
+                <p><strong>Máquina:</strong> <span id="resultado-maquina"></span></p>
+                <p><strong>Cliente:</strong> <span id="resultado-cliente"></span></p>
+                <p><strong>Duração:</strong> <span id="resultado-duracao"></span></p>
+                <p style="font-size: 1.1vw; color: rgb(0, 140, 100); margin-top: 1vh;">
+                    <strong>Total a cobrar: <span id="resultado-total"></span></strong>
+                </p>
+                <div style="display:flex; gap: 1vw; margin-top: 2vh;">
+                    <button id="btn-iniciar-uso" onclick="iniciarUso()"
+                        style="background-color: rgb(0,180,120); color: white; border: none;
+                               padding: 1vh 1.5vw; font-size: 0.9vw; cursor: pointer; text-transform: uppercase;">
+                        INICIAR SESSÃO (marcar ocupado)
+                    </button>
+                    <button id="btn-finalizar-uso" onclick="finalizarUso()"
+                        style="display:none; background-color: rgb(30,30,30); color: white; border: none;
+                               padding: 1vh 1.5vw; font-size: 0.9vw; cursor: pointer; text-transform: uppercase;">
+                        FINALIZAR SESSÃO (liberar máquina)
+                    </button>
+                </div>
+            </article>
+        </section>
+    </main>
+
+    <footer>
+<section class="rodape-fim">
+            <p>© 2025 CyberZone Lan House. Todos os direitos acadêmicos reservados.</p>
+        </section>
+    </footer>
+
+    <script src="../js/main.js" type="module"></script>
+    
+</body>
+</html>

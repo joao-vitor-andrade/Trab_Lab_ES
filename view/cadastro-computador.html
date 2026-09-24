@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/base.css">
+    <link rel="stylesheet" href="../css/layout.css">
+    <link rel="stylesheet" href="../css/components.css">
+    <title>CyberZone - Cadastrar Computador</title>
+</head>
+<body>
+    <header>
+        <section class="topo-marca">
+            <h1>CYBERZONE</h1>
+        </section>
+        <a href="#" id="botao-sair" onclick="realizarLogoutView()">Sair</a>
+    </header>
+
+    <nav class="menu-colorido">
+        <ul>
+            <li><a href="home.html">Home</a></li>
+            <li><a href="cadastro-cliente.html">Cad. Cliente</a></li>
+            <li><a href="cadastro-computador.html">Cad. Computador</a></li>
+            <li><a href="cadastro-funcionario.html">Cad. Funcionário</a></li>
+            <li><a href="cadastro-produto.html">Cad. Produto</a></li>
+            <li><a href="visualizar-clientes.html">Ver Clientes</a></li>
+            <li><a href="visualizar-computadores.html">Ver Computadores</a></li>
+            <li><a href="visualizar-funcionarios.html">Ver Funcionários</a></li>
+            <li><a href="visualizar-produtos.html">Ver Produtos</a></li>
+            <li><a href="uso-maquina.html">Uso de Máquina</a></li>
+            <li><a href="venda.html">Venda</a></li>
+        </ul>
+    </nav>
+
+    <main class="cadastro-main">
+        <section class="cadastro-caixa">
+            <h2>Cadastrar Computador</h2>
+            <form class="cadastro-form" id="form-computador">
+                <input type="text" id="numero-computador" name="numero-computador" placeholder="Número / Identificação (Ex: PC-01)" required>
+                <input type="text" id="processador-computador" name="processador-computador" placeholder="Processador (Ex: Intel Core i7)" required>
+                <input type="text" id="memoria-ram-computador" name="memoria-ram-computador" placeholder="Memória RAM (Ex: 16GB)" required>
+                <input type="text" id="placa-video-computador" name="placa-video-computador" placeholder="Placa de Vídeo (Ex: RTX 3060)" required>
+                <input type="text" id="armazenamento-computador" name="armazenamento-computador" placeholder="Armazenamento (Ex: 512GB SSD)" required>
+                <input type="text" id="monitor-computador" name="monitor-computador" placeholder="Monitor (Ex: 27 polegadas 144Hz)" required>
+                <input type="text" id="valor-hora-computador" name="valor-hora-computador" placeholder="Valor por hora (Ex: 5,00)" inputmode="numeric" required>
+                <select id="status-computador" name="status-computador" required>
+                    <option value="" disabled selected>Status</option>
+                    <option value="livre">Livre</option>
+                    <option value="ocupado">Ocupado</option>
+                    <option value="manutencao">Em Manutenção</option>
+                </select>
+                <button type="button" onclick="cadastrarComputador()">CADASTRAR</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+<section class="rodape-fim">
+            <p>© 2025 CyberZone Lan House. Todos os direitos acadêmicos reservados.</p>
+        </section>
+    </footer>
+
+    <script src="../js/main.js" type="module"></script>
+    
+</body>
+</html>

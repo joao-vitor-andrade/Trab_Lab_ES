@@ -1,0 +1,558 @@
+/* ============================================================
+   components.css — peças reutilizáveis de interface: botões,
+   formulários, tabelas, cards, badges
+   ============================================================ */
+
+/* ── Botão sair (header) ── */
+#botao-sair {
+    color: rgb(0, 220, 180);
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1vw;
+    border: 1px solid rgb(0, 220, 180);
+    padding: 0.5vh 1vw;
+    transition: background-color 0.2s;
+}
+
+#botao-sair:hover {
+    background-color: rgb(0, 220, 180);
+    color: rgb(20, 20, 20);
+}
+
+/* ── Painel de login ── */
+.suporte-acesso {
+    color: rgb(0, 180, 140);
+    font-size: 1vw;
+    text-decoration: none;
+}
+
+.painel-login {
+    width: 28vw;
+    background: rgb(255, 255, 255);
+    padding: 3vh 2vw;
+    border-radius: 4px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+}
+
+.painel-login h2 {
+    text-align: left;
+    color: rgb(51, 51, 51);
+    font-size: 1.5vw;
+    margin-bottom: 3vh;
+    font-weight: normal;
+}
+
+.formulario-dados {
+    display: flex;
+    flex-direction: column;
+    gap: 2vh;
+}
+
+.formulario-dados input {
+    padding: 1.5vh 1vw;
+    border: 1px solid rgb(220, 220, 220);
+    font-size: 1vw;
+    outline: none;
+}
+
+.formulario-dados input:focus {
+    border-color: rgb(0, 180, 140);
+}
+
+#botao-entre {
+    background-color: rgb(0, 180, 140);
+    color: rgb(255, 255, 255);
+    border: none;
+    padding: 1.5vh 0;
+    font-size: 1vw;
+    cursor: pointer;
+    font-weight: bold;
+    text-transform: uppercase;
+    transition: background-color 0.2s;
+}
+
+#botao-entre:hover {
+    background-color: rgb(0, 150, 115);
+}
+
+.recursos-extras {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.8vw;
+}
+
+.recursos-extras a {
+    color: rgb(0, 100, 180);
+    text-decoration: none;
+}
+
+.divisor-alternativo {
+    display: flex;
+    align-items: center;
+    gap: 1vw;
+    color: rgb(153, 153, 153);
+    font-size: 0.8vw;
+}
+
+.divisor-alternativo .traco-separador {
+    flex: 1;
+    height: 1px;
+    background-color: rgb(220, 220, 220);
+}
+
+/* ── Formulário de cadastro ── */
+.cadastro-caixa {
+    background-color: rgb(255, 255, 255);
+    padding: 3vh 2.5vw;
+    width: 32vw;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.cadastro-caixa h2 {
+    font-size: 1.3vw;
+    color: rgb(51, 51, 51);
+    margin-bottom: 2.5vh;
+    font-weight: bold;
+    border-left: 4px solid rgb(0, 180, 140);
+    padding-left: 0.8vw;
+}
+
+.cadastro-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5vh;
+}
+
+.cadastro-form input,
+.cadastro-form select {
+    padding: 1.2vh 1vw;
+    border: 1px solid rgb(220, 220, 220);
+    font-size: 0.9vw;
+    outline: none;
+    width: 100%;
+    background-color: rgb(255, 255, 255);
+    color: rgb(51, 51, 51);
+}
+
+.cadastro-form input:focus,
+.cadastro-form select:focus {
+    border-color: rgb(0, 180, 140);
+}
+
+.cadastro-form button {
+    background-color: rgb(0, 180, 140);
+    color: rgb(255, 255, 255);
+    border: none;
+    padding: 1.4vh 0;
+    font-size: 0.9vw;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 1vh;
+    text-transform: uppercase;
+    transition: background-color 0.2s;
+}
+
+.cadastro-form button:hover {
+    background-color: rgb(0, 150, 115);
+}
+
+.file-input-container {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5vh;
+}
+
+.file-input-container p {
+    font-size: 0.85vw;
+    color: rgb(51, 51, 51);
+}
+
+.custom-file-upload {
+    display: inline-block;
+    padding: 0.8vh 1vw;
+    background-color: rgb(245, 245, 245);
+    border: 1px solid rgb(220, 220, 220);
+    font-size: 0.85vw;
+    cursor: pointer;
+    color: rgb(51, 51, 51);
+    width: max-content;
+}
+
+.custom-file-upload:hover {
+    background-color: rgb(235, 235, 235);
+}
+
+.file-input-container input[type="file"] {
+    display: none;
+}
+
+.file-input-container span {
+    font-size: 0.78vw;
+    color: rgb(102, 102, 102);
+}
+
+/* ── Tabelas de listagem ── */
+.lista-caixa {
+    background-color: rgb(255, 255, 255);
+    padding: 3vh 2.5vw;
+    width: 90vw;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    overflow-x: auto;
+}
+
+.titulo-paginas-lista {
+    margin-bottom: 2.5vh;
+    border-bottom: 2px solid rgb(0, 180, 140);
+    padding-bottom: 1vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.titulo-paginas-lista h2 {
+    font-size: 1.3vw;
+    color: rgb(51, 51, 51);
+    font-weight: bold;
+}
+
+.tabela-dados {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.85vw;
+}
+
+.tabela-dados thead {
+    background-color: rgb(30, 30, 30);
+    color: rgb(255, 255, 255);
+}
+
+.tabela-dados th {
+    padding: 1.2vh 1vw;
+    text-align: left;
+    font-weight: bold;
+}
+
+.tabela-dados td {
+    padding: 1.2vh 1vw;
+    border-bottom: 1px solid rgb(235, 235, 235);
+    color: rgb(51, 51, 51);
+}
+
+.tabela-dados tbody tr:hover {
+    background-color: rgb(240, 255, 250);
+}
+
+.tabela-acoes {
+    display: flex;
+    gap: 0.5vw;
+}
+
+.btn-editar {
+    background-color: rgb(0, 180, 140);
+    color: rgb(255, 255, 255);
+    border: none;
+    padding: 0.6vh 0.8vw;
+    font-size: 0.75vw;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.btn-editar:hover {
+    background-color: rgb(0, 150, 115);
+}
+
+.btn-excluir {
+    background-color: rgb(255, 255, 255);
+    color: rgb(200, 50, 50);
+    border: 1px solid rgb(200, 50, 50);
+    padding: 0.6vh 0.8vw;
+    font-size: 0.75vw;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.btn-excluir:hover {
+    background-color: rgb(200, 50, 50);
+    color: rgb(255, 255, 255);
+}
+
+/* botão excluir/editar usados nas tabelas geradas via JS */
+.botao-excluir {
+    background: #e74c3c;
+    color: #fff;
+    border: none;
+    padding: 5px 12px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 0.85rem;
+    transition: background 0.2s;
+}
+.botao-excluir:hover { background: #c0392b; }
+
+.botao-editar {
+    background: #2980b9;
+    color: #fff;
+    border: none;
+    padding: 5px 12px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 0.85rem;
+    transition: background 0.2s;
+    margin-right: 4px;
+}
+.botao-editar:hover { background: #1a6fa0; }
+
+/* botão "+ Novo" nas páginas de visualização */
+.btn-novo {
+    background: rgb(0, 220, 180);
+    color: rgb(20, 20, 20);
+    text-decoration: none;
+    padding: 8px 18px;
+    border-radius: 6px;
+    font-weight: bold;
+    font-size: 0.9rem;
+    transition: background 0.2s;
+}
+.btn-novo:hover { background: rgb(0, 190, 155); }
+
+/* badge de status da máquina */
+.badge-status {
+    display: inline-block;
+    padding: 0.3vh 0.6vw;
+    font-size: 0.72vw;
+    font-weight: bold;
+    border-radius: 2px;
+}
+
+.badge-livre {
+    background-color: rgb(220, 255, 240);
+    color: rgb(0, 140, 100);
+}
+
+.badge-ocupado {
+    background-color: rgb(255, 230, 230);
+    color: rgb(180, 40, 40);
+}
+
+.badge-manutencao {
+    background-color: rgb(255, 245, 210);
+    color: rgb(160, 110, 0);
+}
+
+/* ── Formulário de uso de máquina / venda ── */
+.uso-caixa {
+    background-color: rgb(255, 255, 255);
+    padding: 3vh 2.5vw;
+    width: 32vw;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    min-width: 320px;
+}
+
+.uso-caixa h2 {
+    font-size: 1.3vw;
+    color: rgb(51, 51, 51);
+    margin-bottom: 2.5vh;
+    font-weight: bold;
+    border-left: 4px solid rgb(0, 180, 140);
+    padding-left: 0.8vw;
+}
+
+.uso-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5vh;
+}
+
+.uso-form label {
+    font-size: 0.82vw;
+    color: rgb(80, 80, 80);
+    font-weight: bold;
+    margin-bottom: -0.8vh;
+}
+
+.uso-form input,
+.uso-form select {
+    padding: 1.2vh 1vw;
+    border: 1px solid rgb(220, 220, 220);
+    font-size: 0.9vw;
+    outline: none;
+    width: 100%;
+    background-color: rgb(255, 255, 255);
+}
+
+.uso-form input:focus,
+.uso-form select:focus {
+    border-color: rgb(0, 180, 140);
+}
+
+.uso-form button {
+    background-color: rgb(0, 180, 140);
+    color: rgb(255, 255, 255);
+    border: none;
+    padding: 1.4vh 0;
+    font-size: 0.9vw;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 1vh;
+    text-transform: uppercase;
+    transition: background-color 0.2s;
+}
+
+.uso-form button:hover {
+    background-color: rgb(0, 150, 115);
+}
+
+#resultado-uso {
+    margin-top: 2vh;
+    padding: 1.5vh 1vw;
+    background-color: rgb(240, 255, 250);
+    border: 1px solid rgb(0, 180, 140);
+    font-size: 0.9vw;
+    display: none;
+}
+
+#resultado-venda {
+    margin-top: 2vh;
+    padding: 1.5vh 1vw;
+    background-color: rgb(240, 255, 250);
+    border: 1px solid rgb(0, 180, 140);
+    font-size: 0.9vw;
+    display: none;
+}
+
+/* ── Cards de resumo (dashboard) ── */
+.cards-resumo {
+    display: flex;
+    gap: 1.5vw;
+    margin-bottom: 3vh;
+    flex-wrap: wrap;
+}
+
+.card-resumo {
+    flex: 1;
+    background-color: rgb(30, 30, 30);
+    color: rgb(255, 255, 255);
+    padding: 2vh 1.5vw;
+    min-width: 150px;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5vh;
+}
+
+.card-resumo span {
+    font-size: 0.78vw;
+    color: rgb(150, 150, 150);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.card-resumo strong {
+    font-size: 2vw;
+    color: rgb(0, 220, 180);
+}
+
+/* ── Banner e cards da home ── */
+.home-banner-texto h2 {
+    font-size: 2.5vw;
+    color: rgb(0, 220, 180);
+    letter-spacing: 2px;
+    margin-bottom: 1.5vh;
+}
+
+.home-banner-texto p {
+    font-size: 1vw;
+    color: rgb(180, 180, 180);
+    line-height: 1.7;
+    max-width: 30vw;
+}
+
+.home-banner-acoes {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5vh;
+}
+
+.btn-destaque {
+    background-color: rgb(0, 180, 140);
+    color: rgb(255, 255, 255);
+    border: none;
+    padding: 1.5vh 2.5vw;
+    font-size: 1vw;
+    font-weight: bold;
+    cursor: pointer;
+    text-decoration: none;
+    text-align: center;
+    text-transform: uppercase;
+    transition: background-color 0.2s;
+}
+
+.btn-destaque:hover {
+    background-color: rgb(0, 150, 115);
+}
+
+.btn-secundario {
+    background-color: transparent;
+    color: rgb(0, 220, 180);
+    border: 1px solid rgb(0, 220, 180);
+    padding: 1.5vh 2.5vw;
+    font-size: 1vw;
+    cursor: pointer;
+    text-decoration: none;
+    text-align: center;
+    text-transform: uppercase;
+    transition: all 0.2s;
+}
+
+.btn-secundario:hover {
+    background-color: rgb(0, 220, 180);
+    color: rgb(20, 20, 20);
+}
+
+.status-card {
+    flex: 1;
+    background-color: rgb(255, 255, 255);
+    border-left: 4px solid rgb(0, 180, 140);
+    padding: 2vh 1.5vw;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.06);
+    min-width: 180px;
+}
+
+.status-card span {
+    display: block;
+    font-size: 0.78vw;
+    color: rgb(120, 120, 120);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 0.8vh;
+}
+
+.status-card strong {
+    font-size: 2vw;
+    color: rgb(30, 30, 30);
+}
+
+.maquina-card {
+    background-color: rgb(255, 255, 255);
+    border: 1px solid rgb(224, 224, 224);
+    padding: 2vh 1.5vw;
+    display: flex;
+    flex-direction: column;
+    gap: 0.8vh;
+}
+
+.maquina-card h3 {
+    font-size: 1.1vw;
+    color: rgb(30, 30, 30);
+}
+
+.maquina-card p {
+    font-size: 0.78vw;
+    color: rgb(120, 120, 120);
+}
+
+.maquina-card .preco {
+    font-size: 0.9vw;
+    color: rgb(0, 140, 100);
+    font-weight: bold;
+    margin-top: 0.5vh;
+}

@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/base.css">
+    <link rel="stylesheet" href="../css/layout.css">
+    <link rel="stylesheet" href="../css/components.css">
+    <title>CyberZone - Venda de Produto</title>
+</head>
+<body>
+    <header>
+        <section class="topo-marca">
+            <h1>CYBERZONE</h1>
+        </section>
+        <a href="#" id="botao-sair" onclick="realizarLogoutView()">Sair</a>
+    </header>
+
+    <nav class="menu-colorido">
+        <ul>
+            <li><a href="home.html">Home</a></li>
+            <li><a href="cadastro-cliente.html">Cad. Cliente</a></li>
+            <li><a href="cadastro-computador.html">Cad. Computador</a></li>
+            <li><a href="cadastro-funcionario.html">Cad. Funcionário</a></li>
+            <li><a href="cadastro-produto.html">Cad. Produto</a></li>
+            <li><a href="visualizar-clientes.html">Ver Clientes</a></li>
+            <li><a href="visualizar-computadores.html">Ver Computadores</a></li>
+            <li><a href="visualizar-funcionarios.html">Ver Funcionários</a></li>
+            <li><a href="visualizar-produtos.html">Ver Produtos</a></li>
+            <li><a href="uso-maquina.html">Uso de Máquina</a></li>
+            <li><a href="venda.html">Venda</a></li>
+        </ul>
+    </nav>
+
+    <main class="uso-main">
+        <section class="uso-caixa">
+            <h2>Registrar Venda de Produto</h2>
+
+            <!-- ETAPA 1: Identificar cliente cadastrado -->
+            <article id="etapa-cliente-venda" style="margin-bottom: 2vh;">
+                <h3 style="font-size:1vw; margin-bottom:1vh; color: rgb(0,180,120);">1. Identificar Cliente Cadastrado</h3>
+                <div style="display:flex; gap:1vw; align-items:flex-end; flex-wrap:wrap;">
+                    <div style="flex:1; min-width:180px;">
+                        <label for="venda-cpf-cliente" style="display:block; font-size:0.85vw; margin-bottom:0.4vh;">CPF do Cliente</label>
+                        <input type="text" id="venda-cpf-cliente" placeholder="Digite o CPF" inputmode="numeric"
+                               style="width:100%; padding:0.8vh 0.8vw; font-size:0.9vw; border:1px solid #444; background:#1a1a1a; color:#fff; border-radius:4px;">
+                    </div>
+                    <button type="button" onclick="buscarClienteVenda()"
+                            style="background:rgb(0,180,120); color:#fff; border:none; padding:0.9vh 1.5vw;
+                                   font-size:0.85vw; cursor:pointer; text-transform:uppercase; border-radius:4px; white-space:nowrap;">
+                        BUSCAR CLIENTE
+                    </button>
+                </div>
+                <p id="venda-cliente-info" style="margin-top:1vh; font-size:0.9vw; color:#aaa;"></p>
+            </article>
+
+            <!-- ETAPA 2: Formulário de venda (bloqueado até cliente identificado) -->
+            <form class="uso-form" id="form-venda" style="opacity:0.4; pointer-events:none;">
+                <h3 style="font-size:1vw; margin-bottom:1vh; color: rgb(0,180,120);">2. Dados da Venda</h3>
+
+                <label for="venda-produto">Produto</label>
+                <select id="venda-produto" name="venda-produto" onchange="aoSelecionarProduto()" required>
+                    <option value="" disabled selected>Carregando produtos...</option>
+                </select>
+                <small id="venda-estoque-info" style="color: rgb(0,140,100); font-weight: bold; margin-top: -1vh; display:block;"></small>
+
+                <label for="venda-preco">Preço unitário (R$) — preenchido automaticamente</label>
+                <input type="number" id="venda-preco" name="venda-preco"
+                       placeholder="Selecione um produto acima" step="0.01" min="0" readonly
+                       style="background:#f0f0f0; cursor:not-allowed;">
+
+                <label for="venda-quantidade">Quantidade</label>
+                <input type="number" id="venda-quantidade" name="venda-quantidade"
+                       placeholder="Ex: 2" min="1" required>
+
+                <button type="button" onclick="calcularVenda()">CALCULAR TOTAL</button>
+            </form>
+
+            <article id="resultado-venda" style="display: none;">
+                <h3 style="margin-bottom: 1.5vh; font-size: 1vw;">Resumo da Venda</h3>
+                <p><strong>Produto:</strong> <span id="venda-resultado-produto"></span></p>
+                <p><strong>Quantidade:</strong> <span id="venda-resultado-quantidade"></span></p>
+                <p style="font-size: 1.1vw; color: rgb(0, 140, 100); margin-top: 1vh;">
+                    <strong>Total: <span id="venda-resultado-total"></span></strong>
+                </p>
+                <button id="btn-confirmar-venda" onclick="confirmarVenda()"
+                    style="margin-top: 2vh; background-color: rgb(30,30,30); color: white; border: none;
+                           padding: 1vh 1.5vw; font-size: 0.9vw; cursor: pointer; text-transform: uppercase;">
+                    CONFIRMAR VENDA (descontar estoque)
+                </button>
+            </article>
+        </section>
+    </main>
+
+    <footer>
+<section class="rodape-fim">
+            <p>© 2025 CyberZone Lan House. Todos os direitos acadêmicos reservados.</p>
+        </section>
+    </footer>
+
+    <script src="../js/main.js" type="module"></script>
+    
+</body>
+</html>
