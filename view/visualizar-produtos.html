@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/base.css">
+    <link rel="stylesheet" href="../css/layout.css">
+    <link rel="stylesheet" href="../css/components.css">
+    <title>CyberZone - Ver Produtos</title>
+</head>
+<body>
+    <header>
+        <section class="topo-marca"><h1>CYBERZONE</h1></section>
+        <a href="#" id="botao-sair" onclick="realizarLogoutView()">Sair</a>
+    </header>
+    <nav class="menu-colorido">
+        <ul>
+            <li><a href="home.html">Home</a></li>
+            <li><a href="cadastro-cliente.html">Cad. Cliente</a></li>
+            <li><a href="cadastro-computador.html">Cad. Computador</a></li>
+            <li><a href="cadastro-funcionario.html">Cad. Funcionário</a></li>
+            <li><a href="cadastro-produto.html">Cad. Produto</a></li>
+            <li><a href="visualizar-clientes.html">Ver Clientes</a></li>
+            <li><a href="visualizar-computadores.html">Ver Computadores</a></li>
+            <li><a href="visualizar-funcionarios.html">Ver Funcionários</a></li>
+            <li><a href="visualizar-produtos.html">Ver Produtos</a></li>
+            <li><a href="uso-maquina.html">Uso de Máquina</a></li>
+            <li><a href="venda.html">Venda</a></li>
+        </ul>
+    </nav>
+    <main class="lista-main">
+        <section class="lista-caixa">
+            <section class="titulo-paginas-lista">
+                <h2>Produtos Cadastrados</h2>
+                <a href="cadastro-produto.html" class="btn-novo">+ Novo Produto</a>
+            </section>
+            <table class="tabela-dados">
+                <thead>
+                    <tr>
+                        <th>#</th><th>Nome</th><th>Categoria</th><th>Descrição</th>
+                        <th>Preço</th><th>Estoque</th><th>Ações</th>
+                    </tr>
+                </thead>
+                <tbody id="tbody-produtos">
+                    <tr><td colspan="7" style="text-align:center;padding:20px;">Carregando...</td></tr>
+                </tbody>
+            </table>
+        </section>
+    </main>
+    <footer>
+<section class="rodape-fim"><p>© 2025 CyberZone Lan House. Todos os direitos acadêmicos reservados.</p></section>
+    </footer>
+    <script src="../js/main.js" type="module"></script>
+    
+</body>
+</html>
