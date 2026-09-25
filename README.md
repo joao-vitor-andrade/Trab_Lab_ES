@@ -33,6 +33,23 @@ CyberZone_JS/
 │   ├── produtos.php
 │   └── banco.sql             (schema do banco de dados MySQL)
 ├── view/                      (as telas internas do sistema: cadastros, listas, uso de máquina, venda)
+│   ├── cadastro-cliente.html
+│   ├── cadastro-computador.html
+│   ├── cadastro-funcionario.html
+│   ├── cadastro-produto.html
+│   ├── editar-cliente.html
+│   ├── editar-computador.html
+│   ├── editar-funcionario.html
+│   ├── editar-produto.html
+│   ├── home.html
+│   ├── login.html
+│   ├── recuperar-senha.html
+│   ├── uso-maquina.html
+│   ├── venda.html
+│   ├── visualizar-clientes.html
+│   ├── visualizar-computadores.html
+│   ├── visualizar-funcionarios.html
+│   └── visualizar-produtos.html
 ├── .gitignore
 └── README.md
 ```
