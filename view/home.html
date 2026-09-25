@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CyberZone - Home</title>
+    <link rel="stylesheet" href="../css/base.css">
+    <link rel="stylesheet" href="../css/layout.css">
+    <link rel="stylesheet" href="../css/components.css"></head>
+<body>
+    <header>
+        <section class="topo-marca">
+            <h1>CYBERZONE</h1>
+        </section>
+        <a href="#" id="botao-sair" onclick="realizarLogoutView()">Sair</a>
+    </header>
+
+    <nav class="menu-colorido">
+        <ul>
+            <li><a href="home.html">Home</a></li>
+            <li><a href="cadastro-cliente.html">Cad. Cliente</a></li>
+            <li><a href="cadastro-computador.html">Cad. Computador</a></li>
+            <li><a href="cadastro-funcionario.html">Cad. Funcionário</a></li>
+            <li><a href="cadastro-produto.html">Cad. Produto</a></li>
+            <li><a href="visualizar-clientes.html">Ver Clientes</a></li>
+            <li><a href="visualizar-computadores.html">Ver Computadores</a></li>
+            <li><a href="visualizar-funcionarios.html">Ver Funcionários</a></li>
+            <li><a href="visualizar-produtos.html">Ver Produtos</a></li>
+            <li><a href="uso-maquina.html">Uso de Máquina</a></li>
+            <li><a href="venda.html">Venda</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <section class="home-banner">
+            <article class="home-banner-texto">
+                <h2>BEM-VINDO À CYBERZONE</h2>
+                <p>Sistema de gerenciamento completo para sua lan house. Controle clientes, máquinas, funcionários, produtos e muito mais em um único lugar.</p>
+            </article>
+            <aside class="home-banner-acoes">
+                <a href="uso-maquina.html" class="btn-destaque">Registrar Uso de Máquina</a>
+                <a href="venda.html" class="btn-secundario">Registrar Venda</a>
+            </aside>
+        </section>
+
+        <section class="home-status">
+            <article class="status-card">
+                <span>Clientes Cadastrados</span>
+                <strong id="stat-clientes">—</strong>
+            </article>
+            <article class="status-card">
+                <span>Máquinas Disponíveis</span>
+                <strong id="stat-maquinas">—</strong>
+            </article>
+            <article class="status-card">
+                <span>Funcionários Ativos</span>
+                <strong id="stat-funcionarios">—</strong>
+            </article>
+            <article class="status-card">
+                <span>Produtos no Estoque</span>
+                <strong id="stat-produtos">—</strong>
+            </article>
+        </section>
+
+        <section class="home-secao-titulo">
+            <h2>STATUS DAS MÁQUINAS</h2>
+        </section>
+
+        <section class="maquinas-grid" id="maquinas-grid">
+            <p style="color:#aaa; padding: 2vh 2vw;">Carregando máquinas...</p>
+        </section>
+    </main>
+
+    <footer>
+<section class="rodape-fim">
+            <p>© 2025 CyberZone Lan House. Todos os direitos acadêmicos reservados.</p>
+        </section>
+    </footer>
+
+    <script src="../js/main.js" type="module"></script>
+    
+</body>
+</html>
