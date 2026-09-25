@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/base.css">
+    <link rel="stylesheet" href="../css/layout.css">
+    <link rel="stylesheet" href="../css/components.css">
+    <title>CyberZone - Editar Cliente</title>
+</head>
+<body>
+    <header>
+        <section class="topo-marca"><h1>CYBERZONE</h1></section>
+        <a href="#" id="botao-sair" onclick="realizarLogoutView()">Sair</a>
+    </header>
+    <nav class="menu-colorido"><ul>
+        <li><a href="home.html">Home</a></li>
+        <li><a href="cadastro-cliente.html">Cad. Cliente</a></li>
+        <li><a href="cadastro-computador.html">Cad. Computador</a></li>
+        <li><a href="cadastro-funcionario.html">Cad. Funcionário</a></li>
+        <li><a href="cadastro-produto.html">Cad. Produto</a></li>
+        <li><a href="visualizar-clientes.html">Ver Clientes</a></li>
+        <li><a href="visualizar-computadores.html">Ver Computadores</a></li>
+        <li><a href="visualizar-funcionarios.html">Ver Funcionários</a></li>
+        <li><a href="visualizar-produtos.html">Ver Produtos</a></li>
+        <li><a href="uso-maquina.html">Uso de Máquina</a></li>
+        <li><a href="venda.html">Venda</a></li>
+    </ul></nav>
+    <main class="cadastro-main">
+        <section class="cadastro-caixa">
+            <h2>Editar Cliente</h2>
+            <form class="cadastro-form" id="form-editar-cliente">
+                <input type="hidden" id="editar-cliente-id">
+                <input type="text" id="editar-nome-cliente" placeholder="Nome" required>
+                <input type="text" id="editar-sobrenome-cliente" placeholder="Sobrenome" required>
+                <input type="text" id="editar-cpf-cliente" placeholder="CPF" inputmode="numeric" required>
+                <input type="date" id="editar-data-nascimento-cliente" title="Data de Nascimento">
+                <input type="tel" id="editar-telefone-cliente" placeholder="Telefone" inputmode="numeric">
+                <input type="email" id="editar-email-cliente" placeholder="Email" required>
+                <div style="display:flex;gap:1rem;margin-top:1vh;">
+                    <button type="button" onclick="salvarEdicaoCliente()" style="flex:1;">SALVAR</button>
+                    <button type="button" onclick="window.location.href='visualizar-clientes.html'" style="flex:1;background:#555;">CANCELAR</button>
+                </div>
+            </form>
+        </section>
+    </main>
+    <footer>
+<section class="rodape-fim"><p>© 2025 CyberZone Lan House. Todos os direitos acadêmicos reservados.</p></section>
+    </footer>
+    <script src="../js/main.js" type="module"></script>
+    
+</body>
+</html>
