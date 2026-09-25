@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/base.css">
+    <link rel="stylesheet" href="../css/layout.css">
+    <link rel="stylesheet" href="../css/components.css">
+    <title>CyberZone - Editar Funcionário</title>
+</head>
+<body>
+    <header>
+        <section class="topo-marca"><h1>CYBERZONE</h1></section>
+        <a href="#" id="botao-sair" onclick="realizarLogoutView()">Sair</a>
+    </header>
+    <nav class="menu-colorido"><ul>
+        <li><a href="home.html">Home</a></li>
+        <li><a href="cadastro-cliente.html">Cad. Cliente</a></li>
+        <li><a href="cadastro-computador.html">Cad. Computador</a></li>
+        <li><a href="cadastro-funcionario.html">Cad. Funcionário</a></li>
+        <li><a href="cadastro-produto.html">Cad. Produto</a></li>
+        <li><a href="visualizar-clientes.html">Ver Clientes</a></li>
+        <li><a href="visualizar-computadores.html">Ver Computadores</a></li>
+        <li><a href="visualizar-funcionarios.html">Ver Funcionários</a></li>
+        <li><a href="visualizar-produtos.html">Ver Produtos</a></li>
+        <li><a href="uso-maquina.html">Uso de Máquina</a></li>
+        <li><a href="venda.html">Venda</a></li>
+    </ul></nav>
+    <main class="cadastro-main">
+        <section class="cadastro-caixa">
+            <h2>Editar Funcionário</h2>
+            <form class="cadastro-form" id="form-editar-funcionario">
+                <input type="hidden" id="editar-funcionario-id">
+                <input type="text" id="editar-nome-funcionario" placeholder="Nome" required>
+                <input type="text" id="editar-sobrenome-funcionario" placeholder="Sobrenome" required>
+                <input type="text" id="editar-cpf-funcionario" placeholder="CPF" inputmode="numeric" required>
+                <input type="date" id="editar-data-nascimento-funcionario" title="Data de Nascimento">
+                <input type="tel" id="editar-telefone-funcionario" placeholder="Telefone" inputmode="numeric">
+                <select id="editar-cargo-funcionario" required>
+                    <option value="" disabled>Cargo / Função</option>
+                    <option value="gerente">Gerente</option>
+                    <option value="atendente">Atendente</option>
+                    <option value="tecnico">Técnico de TI</option>
+                    <option value="caixa">Caixa</option>
+                </select>
+                <input type="text" id="editar-salario-funcionario" placeholder="Salário (Ex: 2.500,00)" inputmode="numeric">
+                <input type="email" id="editar-email-funcionario" placeholder="Email" required>
+                <input type="password" id="editar-senha-funcionario" placeholder="Nova senha (deixe em branco para não alterar)">
+                <div style="display:flex;gap:1rem;margin-top:1vh;">
+                    <button type="button" onclick="salvarEdicaoFuncionario()" style="flex:1;">SALVAR</button>
+                    <button type="button" onclick="window.location.href='visualizar-funcionarios.html'" style="flex:1;background:#555;">CANCELAR</button>
+                </div>
+            </form>
+        </section>
+    </main>
+    <footer>
+<section class="rodape-fim"><p>© 2025 CyberZone Lan House. Todos os direitos acadêmicos reservados.</p></section>
+    </footer>
+    <script src="../js/main.js" type="module"></script>
+    
+</body>
+</html>
