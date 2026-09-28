@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/base.css">
+    <link rel="stylesheet" href="../css/layout.css">
+    <link rel="stylesheet" href="../css/components.css">
+    <title>CyberZone - Login</title>
+</head>
+<body>
+    <header class="topo-entrada">
+        <section class="marca-autenticacao">
+            <h1>CYBERZONE <span>Acesso</span></h1>
+        </section>
+        <a href="#" class="suporte-acesso">Precisa de ajuda?</a>
+    </header>
+
+    <section class="area-autenticacao">
+        <section class="bloco-entrada">
+            <article class="painel-login">
+                <h2>Login</h2>
+                <section class="formulario-dados">
+                    <input type="text" id="cpf-login" placeholder="CPF (somente números)" inputmode="numeric" required>
+                    <input type="password" id="senha-login" placeholder="Senha" required>
+                    <button id="botao-entre" onclick="realizarLogin()">ENTRAR</button>
+                    <section class="recursos-extras">
+                        <a href="recuperar-senha.html">Esqueci minha senha</a>
+                    </section>
+                </section>
+            </article>
+        </section>
+    </section>
+
+    <footer>
+<section class="rodape-fim">
+            <p>© 2025 CyberZone Lan House. Todos os direitos acadêmicos reservados.</p>
+        </section>
+    </footer>
+
+    <script src="../js/main.js" type="module"></script>
+    
+</body>
+</html>
