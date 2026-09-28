@@ -1,4 +1,22 @@
+# Sistema operacional
 .DS_Store
 Thumbs.db
+desktop.ini
+
+# Editores / IDEs
+.vscode/
+.idea/
+*.swp
+
+# Logs
 *.log
+
+# Dependências (caso algum dia sejam usadas)
 node_modules/
+vendor/
+
+# Configuração local (se algum dia existir um arquivo de credenciais separado)
+.env
+
+# Backups de banco de dados feitos localmente
+*.sql.bak
